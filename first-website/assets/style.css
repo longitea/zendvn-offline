@@ -52,19 +52,18 @@ h1{
 /* -=============== Content ===============- */
 /* Left */
 .content {
+
     width: 800px;
     margin: 0 auto;
     height: 400px;
-    display: table;
+    padding-top: 10px;
+
 }
 
 .content .left{
     width: 20%;
+    float: left;
     height: 100%;
-    display: table-cell;
-
-
-    
 }
 
 .left .head-content {
@@ -94,8 +93,9 @@ h1{
 
 /* Center */
 .content .center {
-    display: table-cell;
-    width: 60%;
+    float: left;
+    width: 59%;
+    height: 100%;
     border-left: 1px dotted #000;
     border-right: 1px dotted #000;
 
@@ -103,6 +103,7 @@ h1{
 
 .center h2 {
     text-align: center;
+    margin : 20px 0;
 }
 
 .center p {
