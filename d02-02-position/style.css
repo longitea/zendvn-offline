@@ -1,0 +1,106 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+}
+
+/* -=============== Header ===============- */
+header {
+
+}
+
+.block {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    background-color: greenyellow;
+    text-align: center;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+/* -=============== Section ===============- */
+section {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* set thẻ cha chứa before có thuộc tính relative để không bị ẩn  */
+section .mid {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 75px;
+}
+
+/* CT - left - right */
+section .mid::before {
+    content: "CTL";
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+}
+
+section .mid::after {
+    content: "CTR";
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    position: absolute;
+    top: -50px;
+    right: -100px;
+}
+
+/* CB - left - right */
+section .center::before {
+    content: "CBL";
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    position: absolute;
+    bottom: -50px;
+    left: -100px;
+}
+
+section .center::after {
+    content: "CBR";
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    position: absolute;
+    bottom: -50px;
+    right: -100px;
+}
+
+/* -=============== Footer ===============- */
+footer {
+    bottom: 0;
+}
