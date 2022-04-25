@@ -23,8 +23,7 @@ a {
 }
 
 body {
-    height: 100vh;
-    position: relative;
+
 }
 
 /* -=============== Header  ===============- */
@@ -84,10 +83,14 @@ section {
 .logo {
     height: 171px;
     text-align: center;
+    position: relative;
 }
 
 section img{
-    padding-top: 79px;
+    /* padding-top: 79px; */
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 0;
 }
 
 .search-place {
@@ -177,7 +180,7 @@ section img{
 /* -=============== Footer ===============- */
 
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     background-color: #f2f2f2;
@@ -218,6 +221,5 @@ footer div {
     line-height: 48px;
     color: #70757a;
     font-size: 14px;
-    
 }
 
