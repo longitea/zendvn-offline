@@ -6,19 +6,19 @@
 }
 
 body {
-    height: 100vh;
-    position: relative;
+    height: 800px;
 }
 
 /* -=============== Header ===============- */
 header {
-
+    top: 0;
+    position: fixed;
 }
 
 .block {
     width: 100%;
     text-align: center;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .box {
@@ -44,6 +44,7 @@ header {
 section {
     top: 50%;
     transform: translateY(-50%);
+    position: fixed;
 }
 
 /* set thẻ cha chứa before có thuộc tính relative để không bị ẩn  */
@@ -103,4 +104,5 @@ section .center::after {
 /* -=============== Footer ===============- */
 footer {
     bottom: 0;
+    position: fixed;
 }
