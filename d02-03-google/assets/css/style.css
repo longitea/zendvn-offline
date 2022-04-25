@@ -113,6 +113,21 @@ section img{
     position: relative;
 }
 
+.search-place input {
+    position: absolute;
+    line-height: 38px;
+    left: 40px;
+    font-size: 14px;
+    /* border: none; */
+    padding-left: 20px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.search-place input:focus {
+    outline: none;
+}
+
 .box-search i {
     position: absolute;
     line-height: 40px;
