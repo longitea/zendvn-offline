@@ -1,0 +1,73 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    background-color: #eef3f9;
+    font-family: 'Koulen', sans-serif;
+}
+
+.blue {
+    background-color: #20225d;
+    color: white;
+}
+
+.box {
+    height: 780px;
+    width: 625px;
+    margin: 210px auto;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.header {
+    height: 215px;
+
+}
+
+.header p {
+
+    font-size: 24px;
+    text-align: center;
+    line-height: 215px;
+    font-weight: 500;
+}
+
+form {
+    color: #20225d;
+    font-weight: 550;
+    margin: 70px 120px;
+}
+
+form .line {
+    margin-bottom: 20px;
+    padding: 15px 0;
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    border-bottom: 3px solid #d5d5f1;
+    opacity: 0.6;
+
+}
+
+form select option {
+    /* Không Ăn CSS */
+    opacity: 0.6;
+
+}
+
+
+
+form button {
+    display: block;
+    height: 75px;
+    width: 250px;
+    margin: 40px auto;
+    border-radius: 50px;
+    font-size: 20px;
+}

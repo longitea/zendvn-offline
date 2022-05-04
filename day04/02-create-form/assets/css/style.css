@@ -1,0 +1,137 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    background: rgb(245,244,252);
+    background: linear-gradient(90deg, rgba(245,244,252,1) 32%, rgba(249,244,251,1) 32%, rgba(244,242,253,1) 100%);
+}
+
+.box {
+
+    width: 1100px;
+    height: 800px;
+    margin: 150px auto;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    /* làm lớp cha để lớp right đè lên left */
+    position: relative;
+    padding: 40px;
+    overflow: hidden;
+}
+
+
+/* -=============== BEGIN : LEFT  ===============- */
+
+
+.left {
+    box-sizing: border-box;
+    background: rgb(183,143,231);
+    background: linear-gradient(180deg, rgba(183,143,231,1) 0%, rgba(158,123,223,1) 63%, rgba(110,89,206,1) 100%);
+
+    width: 500px;
+    height: 100%;
+    border-radius: 10px;
+    padding: 65px;
+    color: white;
+}
+
+.left .nav {
+    margin: 40px 0;
+    width: 60%;
+}
+  
+.left .nav i {
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c2a4ee;
+    color: white;
+}
+
+.left .nav p {
+    margin: 10px 0;
+}
+
+.left .nav .header {
+    font-size: 22px;
+}
+
+.left .nav .description {
+    text-align: left;
+}
+
+
+
+
+/* -=============== BEGIN : RIGHT  ===============- */
+
+.right {
+    position: absolute;
+    width: 650px;
+    height: 100%;
+    background-color: white;
+    top: 40px;
+    right: 0
+
+}
+
+.right .content {
+    margin-top: 110px;
+    margin-left: 100px;
+    color: #172047;
+    font-weight: 550;
+}
+
+.right .content h1 {
+    margin-bottom: 50px;
+    font-weight: 550;
+}
+
+.right .content form > input {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 450px;
+    font-size:18px;
+    outline: 2px solid #ccc;
+    border-radius: 5px;
+    font-style: bold;
+    font-weight: 550;
+    opacity: 0.6;
+
+}
+
+
+.right .content span {
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.right .content span > input {
+    opacity: 1;
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+
+.right button { 
+    background-color: #6e59ce;
+    color: white;
+    width: 450px;
+    padding: 25px 0;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 0 14px 28px #cac6f8;
+    margin: 46px 0;
+}
