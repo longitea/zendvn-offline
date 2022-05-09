@@ -1,0 +1,80 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.nav {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 10px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 5px;
+    overflow: hidden;
+
+    /* width: 300px; */
+    flex-basis : 300px; 
+    display: flex; 
+    /** dùng để set kích thước của thằng main size (flex-item) */
+    flex-direction: column;
+
+}
+
+.column-item {
+    flex-grow: 4;
+    text-align: left;
+    padding: 10px;
+}
+
+.picture {
+    width: 300px;
+    height: 150px;
+    background: url("img/what_is_html.jpg") top center no-repeat;
+}
+
+.header {
+    color: blue;
+}
+
+
+/* Footer */
+
+
+.footer {
+    display: flex;
+    /* justify-content: space-around; */
+    /* justify-content : flex-start; */
+
+}
+
+.footer-item {
+    margin: 10px;
+    
+}
+
+.cirlce {
+    height: 40px;
+    width: 40px;   
+    border-radius: 50px;
+    background-color: lightblue;
+    box-shadow: 5px 10px 18px #888888;
+    align-self : flex-end;
+
+}
+
+.text {
+    flex: 2;
+    text-align: left;
+}
+
+.date {
+    font-size: 10px;
+    line-height: 40px;
+}
