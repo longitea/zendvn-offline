@@ -1,0 +1,107 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.col-item {
+    margin: 10px;
+    width: 60%;
+    border: 1px solid #000;
+    display: flex;
+    /* justify-content: center; */
+}
+
+h1 {
+    padding: 10px 0;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+/* PC Menu */
+.menu-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list .menu-item {
+    padding: 20px;
+    list-style-type: none;
+}
+/* Mobile Menu */
+
+.mobile-menu {
+
+    /* set justify-content:center cho thẻ cha chứa nó
+    thì vào giữa, nhưng justify-self cho chính nó thì lại
+    không ăn  */
+    justify-self: center;
+
+    /*! vì nó không ăn nên phải dùng text align */
+    width: 100%;
+    text-align: center;
+}
+
+
+.image {
+    width: 60%;
+}
+
+.image img {
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.content p {
+    text-align: center;
+}
+
+
+@media (max-width:749px) {
+    body {
+        background-color: antiquewhite;
+    }
+    .menu-list {
+        display: none;
+    }
+    .header {
+        order: 3;
+    }
+    .menu {
+        order: 4;
+    }
+    .image {
+        order: 2;
+    }
+    .content {
+        order: 1;
+    }
+    .footer {
+        order: 5;
+    }
+}
+
+@media (min-width:749px) {
+    body {
+        background-color: antiquewhite;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
