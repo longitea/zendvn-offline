@@ -1,27 +1,35 @@
+
+/* -=============== Thanh Long's Grid System ===============- */
+
 .container {
     width: 100%;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
-    align-items: center;
-    justify-content: space-between;
-
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding-left: -15px;
-    padding-right: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .col {
-    padding: 0 12px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
+/* 0.PC high Resolution >= 1400 */
+@media (max-width: 2040px) {
+    .container {
+        max-width: 1320px;
+    }
+}
 
-/* Man Hinh PC >= 1200px  */
-@media (min-width: 1200px) {
+/* 1.PC low Resolution >= 1200 and <= 1399px  */
+@media (max-width: 1399px){
     .container {
         max-width: 1140px;
     }
@@ -76,8 +84,8 @@
 
 }
 
-/* LAPTOP */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* 2.LAPTOP >= 992 and <= 1199 */
+@media (max-width: 1199px){
     .container {
         max-width: 960px;
     }
@@ -131,8 +139,8 @@
     }
 }
 
-/* Ipad */
-@media (min-width: 768px) and (max-width: 991px) {
+/* 3.Ipad >= 768px and <= 991px*/
+@media (max-width: 991px){
     .container {
         max-width: 720px;
     }
@@ -186,8 +194,8 @@
     }
 }
 
-/* IPad Mini */
-@media (min-width: 576px) and (max-width: 767px) {
+/* 4.IPad Mini >=576px and <= 767px */
+@media (max-width: 767px){
     .container {
         max-width: 540px;
     }
@@ -241,8 +249,12 @@
 }
 
 
-/* if screen <= 576px do ...*/
+/* 5.Mobile <= 576px do ...*/
 @media (max-width:575px) {
+    .container {
+        width: 100%;
+    }
+
     .col-1 {
         width: calc(100%/12);
     }
@@ -291,3 +303,5 @@
         width: calc(100%/12 * 12);
     }
 }
+
+/* -=============== Final Edit 17/05/22 ===============- */

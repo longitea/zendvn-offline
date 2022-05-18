@@ -6,50 +6,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAY06-Project</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <!-- Libs, vendor thư viện bên thứ 3 -->
+
+
+    <!-- CSS custom (do mình viết) -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
 
 <body>
-    <!--=============== Begin : Heading  ===============-->
-    <!-- Navigation-->
-    <div class="menu fixed-top">
+    <!--=============== Begin : Heading ===============-->
+    <!-- Header Start -->
+    <header id="header">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-2 col-lg-3 col-md-5 col-6">
-                    <a class="logo" href=""><img src="assets/img/navbar-logo.svg" alt=""></a>
-                </div>
-                <div class="col-xl-10 col-lg-9 col-md-7 col-6">
-                    <ul class="menu-list text-uppercase">
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Porfolio</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Team</a></li>
-                        <li><a href="">Contact</a></li>
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/navbar-logo.svg" alt="logo">
+                </a>
+                <nav class="menu-wrapper">
+                    <ul class="menu text-uppercase">
+                        <li class="menu-item"><a href="" class="menu-link">services</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">portfolio</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">about</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">team</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">contact</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header-->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="subheading">Welcome To Our Studio!</div>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="heading text-uppercase">It's Nice To Meet You</div>
-
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <a class="btn btn-primary btn-xl text-uppercase" href="">Tell Me More</a>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
+    <!-- Header End -->
+
+    <!-- Banner Start -->
+    <section id="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Welcome To Our Studio!</h2>
+                <h1 class="text-uppercase">IT'S NICE TO MEET YOU</h1>
+                <a href="" class="btn-tell-me-more text-uppercase">tell me more</a>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!--=============== Begin : CONNTENT ===============-->
+    <!-- 1. Service -->
+    <section class="page-section" id="service">
+        <div class="container">
+            <div class="page-content">
+                <h1 class="page-heading">SERVICES</h1>
+                <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="service-item">
+                <div class="row">
+                    <!-- item 1 -->
+                    <div class="col col-md-4 col-sm-12 col-12">
+                        
+                    </div>
+                    <!-- item 2 -->
+                    <div class="col col-md-4 col-sm-12 col-12"></div>
+
+                    <!-- item 3 -->
+                    <div class="col col-md-4 col-sm-12 col-12"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PORTFOLIO -->
+    <section class="page-section" id="porfolio">
+        <div class="container">
+            <div class="page-content">
+                <h1 class="page-heading">PORTFOLIO</h1>
+                <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="porfolio-item">
+                <div class="row">
+                    <!-- item 1 -->
+                    <div class="col"></div>
+                    <!-- item 2 -->
+                    <div class="col"></div>
+                    <!-- item 3 -->
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 3.ABOUT -->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="page-content">
+                <h1 class="page-heading">ABOUT</h1>
+                <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="about-item">
+                <div class="row">
+                    <!-- item 1 -->
+                    <div class="col"></div>
+                    <!-- item 2 -->
+                    <div class="col"></div>
+                    <!-- item 3 -->
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 4. TEAM -->
+    <section class="page-section" id="team">
+        <div class="container">
+            <div class="page-content">
+                <h1 class="page-heading">OUR AMAZING TEAM</h1>
+                <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="team-item">
+                <div class="row">
+                    <!-- item 1 -->
+                    <div class="col"></div>
+                    <!-- item 2 -->
+                    <div class="col"></div>
+                    <!-- item 3 -->
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 5.CONTACT US -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="page-content">
+                <h1 class="page-heading">CONTACT US</h1>
+                <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="contact-item">
+                <div class="row">
+                    <!-- item 1 -->
+                    <div class="col"></div>
+                    <!-- item 2 -->
+                    <div class="col"></div>
+                    <!-- item 3 -->
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--=============== End : CONNTENT ===============-->
+
     <!--=============== Begin : SERVICES  ===============-->
     <section class="services">
         <div class="container">
@@ -317,6 +436,14 @@
             </ul>
         </div>
     </section>
+    <!--=============== Begin : TEAM ===============-->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-heading text-uppercase">OUR AMAZING TEAM</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+    </section>
+
 
 </body>
 
