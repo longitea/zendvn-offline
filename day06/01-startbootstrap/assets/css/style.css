@@ -11,6 +11,7 @@
     --color-white: #fff;
     /* backgourd-color */
     --bs-light-rgb: rgba(248, 249, 250, 1);
+    --bs-primary-rgb: rgba(255, 200, 0, 1);
 }
 
 /* Reset CSS */
@@ -33,7 +34,12 @@ body {
     font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--ff-montserrat);
     color: var(--color-black);
 }
@@ -49,22 +55,42 @@ p {
 
 /*  Biến dùng chung cho nhiều class */
 a {
+    cursor: pointer;
     text-decoration: none;
     font-family: var(--ff-montserrat);
     color: var(--color-white);
+}
+
+
+.btn-primary {
+    padding: 20px 40px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+
 }
 
 .text-uppercase {
     text-transform: uppercase;
 }
 
+.text-center {
+    text-align: center !important;
+}
 
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: center;
+.align-items-center {
+    align-items: center;
+}
+
+.mb-4 {
+    margin-bottom: 24px;
+}
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
 /* CSS từng thành phần */
@@ -78,6 +104,7 @@ a {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
 }
 
 #header .header-content {
@@ -113,6 +140,7 @@ a {
 .menu-link:hover {
     color: var(--color-primary);
 }
+
 /* BANNER */
 #banner {
     background: url("../img/header-bg.jpg");
@@ -130,7 +158,7 @@ a {
     color: var(--color-white);
 }
 
-.banner-content > h2 {
+.banner-content>h2 {
     color: inherit;
     margin-bottom: 32px;
     text-transform: capitalize;
@@ -140,29 +168,24 @@ a {
     font-weight: 400;
 }
 
-.banner-content > h1 {
+.banner-content>h1 {
     color: inherit;
     margin-bottom: 64px;
     font-size: 72px;
 }
 
-.banner-content > a {
+/* .banner-content>a {
     padding: 20px 40px;
     background-color: var(--color-primary);
     border-radius: 5px;
     font-size: 18px;
     font-weight: 700;
-
-}
+} */
 
 /* -===============  HEADING END ===============- */
 /* page-section */
 .page-section {
     padding: 96px 0;
-}
-
-.page-content {
-    text-align: center;
 }
 
 .page-heading {
@@ -175,55 +198,299 @@ a {
     font-style: italic;
 }
 
-/* -=============== CONTENT START ===============- */
+/* -=============== Service START ===============- */
 /* 1.Service*/
-#service {
+#service {}
 
+.color-primary {
+    color: var(--bs-primary-rgb);
 }
 
+#service h4 {
+    margin: 16px 0;
+    font-size: 24px;
+}
+
+/* -=============== Porfolio START ===============- */
 #porfolio {
     background-color: var(--bs-light-rgb);
 }
 
-#about {
+/* images */
+.portfolio-item {}
+
+.portfolio-link {
+    max-width: 416px;
+    display: block;
+    position: relative;
 
 }
 
+.img-fluid {
+    max-width: 100%;
+}
+
+.portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 200, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+
+}
+
+/* .portfolio-hover-content {
+    font-size: 1.25rem;
+    color: white;
+} */
+
+.portfolio-link:hover .portfolio-hover {
+    opacity: 1;
+}
+
+/* text */
+.portfolio-content {
+    padding: 24px;
+    background-color: var(--color-white);
+}
+
+.portfolio-content-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* -=============== ABOUT START ===============- */
+
+#about {}
+
+/* -=============== TEAM START ===============- */
 #team {
     background-color: var(--bs-light-rgb);
 }
 
+.team-member {
+    margin-bottom: 48px;
+}
+
+.team-member img {
+    width: 14rem;
+    height: 14rem;
+    border: 0.5rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.team-member h4 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.team-member p {
+    margin-bottom: 1rem;
+
+}
+
+.btn-social {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    margin: 0 8px;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.btn-social:focus {
+    background-color: #1c1f23;
+    border-color: #1a1e21;
+    box-shadow: 0 0 0 0.25rem rgb(66 70 73 / 50%);
+}
+
+/* 4.5 Brand */
+.brand {
+    padding: 48px 0;
+}
+
+.img-brand {
+    height: 2.75rem;
+
+}
+
+.brand a {
+    display: block;
+    display: block;
+    text-align: center;
+    margin: 16px 0;
+}
+
+/* -=============== CONTACT START ===============- */
+
 #contact {
     background: url("../img/map-image.png");
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
 
-
-/* -=============== CONTENT END ===============- */
-
-/* BTN HERE */
-.btn {
-    cursor: pointer;
-    border-radius: 0.25rem;
+.page-heading {
+    color: inherit;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #ffc800;
-    border-color: #ffc800;
+.page-description {
+    color: var(--color-gray);
 }
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #d9aa00;
-    border-color: #cca000;
+/* contact-item */
+.contact-item {
+    text-align: center;
 }
 
-.btn-xl {
-    padding: 1.25rem 2.5rem;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1.125rem;
+/* 1. Input Left */
+.contact-form-input:focus {
+    border-color: var(--color-primary);
+}
+
+.contact-form-input {
+    padding: 1.25rem;
     font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    font-family: var(--ff-montserrat);
+    display: block;
+    width: 100%;
+    outline: none;
 }
 
-/* -=============== SERVICE HERE ===============- */
+/* 2. Input Right */
+
+.form-group:last-child {
+    height: 100%;
+}
+
+.text-box {
+    padding: 20px;
+    height: 100%;
+}
+
+/* 3. button send */
+.btn-send-message {
+    display: inline-block;
+    margin-top: 48px;
+}
+
+/* -=============== FOOTER START ===============- */
+#footer {
+    padding: 24px 0;
+    align-items: center;
+}
+
+.text-dark {
+    color: var(--color-black);
+    margin-right: 1rem;
+}
+
+.my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.text-dark:hover,
+.text-dark:focus {
+    color: #1a1e21;
+}
+
+
+/* Xóa ở đây */
+.background-black {
+    background-color: bisque;
+}
+
+
+.fex-1 {
+    flex: 1;
+}
+
+
+@media (max-width:767px) {
+    .order-img {
+        order: -1;
+    }
+
+}
+
+.timeline-body {
+    padding: 0 15px;
+    width: 93%;
+}
+
+.timeline-body h4 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.timeline-body p {
+    font-size: 1rem;
+}
+
+.text-right {
+    text-align: right;
+    padding: 0 20px 20px 100px;
+}
+
+.text-left {
+    text-align: left;
+    padding: 0 100px 20px 20px;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    border: 7px solid #e9ecef;
+
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.circle-end {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    width: 176px;
+    height: 176px;
+}
+
+.circle-end h4 {
+
+    color: inherit;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 2px; 
+    background-color: #e9ecef;
+    right: 50%;
+    z-index: -1;
+}
 

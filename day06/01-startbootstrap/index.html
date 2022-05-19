@@ -23,7 +23,6 @@
 
 <body>
     <!--=============== Begin : Heading ===============-->
-    <!-- Header Start -->
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -32,11 +31,11 @@
                 </a>
                 <nav class="menu-wrapper">
                     <ul class="menu text-uppercase">
-                        <li class="menu-item"><a href="" class="menu-link">services</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">portfolio</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">about</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">team</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">contact</a></li>
+                        <li class="menu-item"><a href="#service" class="menu-link">services</a></li>
+                        <li class="menu-item"><a href="#portfolio" class="menu-link">portfolio</a></li>
+                        <li class="menu-item"><a href="#about" class="menu-link">about</a></li>
+                        <li class="menu-item"><a href="#team" class="menu-link">team</a></li>
+                        <li class="menu-item"><a href="#contact" class="menu-link">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,13 +43,13 @@
     </header>
     <!-- Header End -->
 
-    <!-- Banner Start -->
+    <!--=============== Begin : Banner ===============-->
     <section id="banner">
         <div class="container">
             <div class="banner-content">
                 <h2>Welcome To Our Studio!</h2>
                 <h1 class="text-uppercase">IT'S NICE TO MEET YOU</h1>
-                <a href="" class="btn-tell-me-more text-uppercase">tell me more</a>
+                <a href="" class="btn-primary btn-tell-me-more">tell me more</a>
             </div>
         </div>
     </section>
@@ -60,21 +59,47 @@
     <!-- 1. Service -->
     <section class="page-section" id="service">
         <div class="container">
-            <div class="page-content">
+            <div class="page-content text-center">
                 <h1 class="page-heading">SERVICES</h1>
                 <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
             <div class="service-item">
-                <div class="row">
+                <div class="row text-center">
                     <!-- item 1 -->
-                    <div class="col col-md-4 col-sm-12 col-12">
-                        
+                    <div class="col col-md-4 col-12 ">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x color-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4>E-Commerce</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+                            quam
+                            architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <!-- item 2 -->
-                    <div class="col col-md-4 col-sm-12 col-12"></div>
+                    <div class="col col-md-4 col-12 ">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x color-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4>Responsive Design</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+                            quam
+                            architecto quo inventore harum ex magni, dicta impedit.
+                        </p>
+                    </div>
 
                     <!-- item 3 -->
-                    <div class="col col-md-4 col-sm-12 col-12"></div>
+                    <div class="col col-md-4 col-12 ">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x color-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4>Web Security</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+                            quam
+                            architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
 
                 </div>
             </div>
@@ -84,18 +109,90 @@
     <!-- 2. PORTFOLIO -->
     <section class="page-section" id="porfolio">
         <div class="container">
-            <div class="page-content">
+            <div class="page-content text-center">
                 <h1 class="page-heading">PORTFOLIO</h1>
                 <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
             <div class="porfolio-item">
                 <div class="row">
                     <!-- item 1 -->
-                    <div class="col"></div>
+                    <div class="col col-lg-4 col-sm-6 col-12 mb-4">
+                        <a class="portfolio-link" href="">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-content text-center">
+                            <h3 class="portfolio-content-heading">Threads</h3>
+                            <p class="portfolio-content-description text-muted">Illustration</p>
+                        </div>
+                    </div>
                     <!-- item 2 -->
-                    <div class="col"></div>
+                    <div class="col col-lg-4 col-sm-6 col-12 mb-4">
+                        <a class="portfolio-link" href="">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-content text-center">
+                            <h3 class="portfolio-content-heading">Threads</h3>
+                            <p class="portfolio-content-description text-muted">Illustration</p>
+                        </div>
+                    </div>
                     <!-- item 3 -->
-                    <div class="col"></div>
+                    <div class="col col-lg-4 col-sm-6 col-12 mb-4">
+                        <a class="portfolio-link" href="">
+                            <div class="portfolio-hover">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-content text-center">
+                            <h3 class="portfolio-content-heading">Finish</h3>
+                            <p class="portfolio-content-description text-muted">Illustration</p>
+                        </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="col col-lg-4 col-sm-6 col-12 mb-4">
+                        <a class="portfolio-link" href="">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-content text-center">
+                            <h3 class="portfolio-content-heading">Threads</h3>
+                            <p class="portfolio-content-description text-muted">Illustration</p>
+                        </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="col col-lg-4 col-sm-6 col-12 mb-4">
+                        <a class="portfolio-link" href="">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-content text-center">
+                            <h3 class="portfolio-content-heading">Threads</h3>
+                            <p class="portfolio-content-description text-muted">Illustration</p>
+                        </div>
+                    </div>
+                    <!-- item 6 -->
+                    <div class="col col-lg-4 col-sm-6 col-12 mb-4">
+                        <a class="portfolio-link" href="">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-content text-center">
+                            <h3 class="portfolio-content-heading">Threads</h3>
+                            <p class="portfolio-content-description text-muted">Illustration</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,18 +202,103 @@
     <!-- 3.ABOUT -->
     <section class="page-section" id="about">
         <div class="container">
-            <div class="page-content">
+            <div class="page-content text-center">
                 <h1 class="page-heading">ABOUT</h1>
                 <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
-            <div class="about-item">
-                <div class="row">
-                    <!-- item 1 -->
-                    <div class="col"></div>
-                    <!-- item 2 -->
-                    <div class="col"></div>
-                    <!-- item 3 -->
-                    <div class="col"></div>
+            <div class="timeline">
+
+
+                <!-- 1 -->
+                <div class="row mb-100">
+                    <div class=" col-md-5 col-sm-10 ">
+                        <div class="timeline-body text-right ">
+                            <h4>2009-2011</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                ut
+                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
+                                sit vero
+                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 order-img">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." />
+                    </div>
+
+                    <div class="col-md-5"></div>
+                </div>
+
+                <!-- 2 -->
+                <div class="row mb-100">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 col-sm-2 order-img">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." />
+                    </div>
+
+                    <div class="col-md-5 col-sm-10">
+                        <div class="timeline-body text-left">
+                            <h4>2009-2011</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                ut
+                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
+                                sit vero
+                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1 -->
+                <div class="row  mb-100">
+                    <div class=" col-md-5 col-sm-10 ">
+                        <div class="timeline-body text-right ">
+                            <h4>2009-2011</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                ut
+                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
+                                sit vero
+                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 order-img">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." />
+                    </div>
+
+                    <div class="col-md-5"></div>
+                </div>
+
+                <!-- 2 -->
+                <div class="row mb-100">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 col-sm-2 order-img">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." />
+                    </div>
+                    <div class="col-md-5 col-sm-10">
+                        <div class="timeline-body text-left">
+                            <h4>2009-2011</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                                ut
+                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
+                                sit vero
+                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col col-md-2 ">
+
+                    </div>
+                </div>
+
+                <!-- last one -->
+                <div class="circle-end rounded-circle text-center">
+                    <h4>Be Part</h4>
+                    <h4>Of Our</h4>
+                    <h4>Story!</h4>
                 </div>
             </div>
         </div>
@@ -127,324 +309,171 @@
     <!-- 4. TEAM -->
     <section class="page-section" id="team">
         <div class="container">
-            <div class="page-content">
+            <div class="page-content text-center">
                 <h1 class="page-heading">OUR AMAZING TEAM</h1>
                 <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
             <div class="team-item">
                 <div class="row">
                     <!-- item 1 -->
-                    <div class="col"></div>
+                    <div class="col col-lg-4 col-12">
+                        <div class="team-member text-center">
+                            <img src="assets/img/team/1.jpg" alt="">
+                            <h4>Parveen Anand</h4>
+                            <p>Lead Designer</p>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
                     <!-- item 2 -->
-                    <div class="col"></div>
+                    <div class="col col-lg-4 col-12">
+                        <div class="team-member text-center">
+                            <img src="assets/img/team/2.jpg" alt="">
+                            <h4>Parveen Anand</h4>
+                            <p>Lead Designer</p>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
                     <!-- item 3 -->
-                    <div class="col"></div>
+                    <div class="col col-lg-4 col-12">
+                        <div class="team-member text-center">
+                            <img src="assets/img/team/3.jpg" alt="">
+                            <h4>Parveen Anand</h4>
+                            <p>Lead Designer</p>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="btn btn-social">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+                        laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!-- Client -->
+    <section class="brand">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-12">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg"
+                            alt="..." aria-label="Microsoft Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg"
+                            alt="..." aria-label="Google Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg"
+                            alt="..." aria-label="Facebook Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg"
+                            alt="..." aria-label="IBM Logo" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- 5.CONTACT US -->
     <section class="page-section" id="contact">
         <div class="container">
-            <div class="page-content">
-                <h1 class="page-heading">CONTACT US</h1>
+            <div class="page-content text-center">
+                <h1 class="page-heading">CONTACT USA</h1>
                 <p class="page-description">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
-            <div class="contact-item">
+            <form action="" class="contact-item">
                 <div class="row">
                     <!-- item 1 -->
-                    <div class="col"></div>
+                    <div class="col col-md-6">
+                        <!-- 1. Name -->
+                        <div class="form-group">
+                            <input class="contact-form-input mb-4" id="name" type="text" placeholder="Your Name *"
+                                required class="form-control" data-sb-validations="required" data-sb-can-submit="no">
+                        </div>
+                        <!-- 2. Email -->
+                        <div class="form-group">
+                            <input class="contact-form-input mb-4" id="email" type="email" placeholder="Your Email *"
+                                data-sb-validations="required,email" data-sb-can-submit="no">
+                        </div>
+
+                        <!-- 3. Phone -->
+                        <div class="form-group">
+                            <input class="contact-form-input" id="phone" type="tel" placeholder="Your Phone *"
+                                data-sb-validations="required" data-sb-can-submit="no">
+                        </div>
+
+                    </div>
                     <!-- item 2 -->
-                    <div class="col"></div>
-                    <!-- item 3 -->
-                    <div class="col"></div>
+                    <div class="col col-md-6 ">
+                        <div class="form-group">
+                            <textarea class="contact-form-input text-box" id="message" required class="form-control"
+                                placeholder="Your Message *"></textarea>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <!-- item 3 -->
+
+                <a type="submit" href="#!" class="btn-primary btn-send-message">send message</a>
+
+
+            </form>
+
         </div>
     </section>
 
+    <!--=============== Start : Footer  ===============-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col col-lg-4 col-12">Copyright © Your Website 2022</div>
+                <div class="col col-lg-4 col-12">
+                    <div class="text-center my-3">
+                        <a href="#!" class="btn btn-social">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#!" class="btn btn-social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#!" class="btn btn-social">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
 
-
+                <div class="col col-lg-4 col-12">
+                    <a class="text-dark" href="#!">Privacy Policy</a>
+                    <a class="text-dark" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!--=============== End : CONNTENT ===============-->
-
-    <!--=============== Begin : SERVICES  ===============-->
-    <section class="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                </div>
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <!-- icon 1 -->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                    <span class="fa-stack fa-3x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4>E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <!-- icon 2 -->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                    <span class="fa-stack fa-3x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4>Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.
-                    </p>
-                </div>
-                <!-- icon 3 -->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
-                    <span class="fa-stack fa-3x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4>Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=============== Begin : PORTFOLIO  ===============-->
-    <section class="portfolio">
-        <div class="container">
-            <h2 class="section-heading text-uppercase">PORTFOLIO</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-
-            <div class="row">
-                <!-- Portfolio item 1-->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Threads</div>
-                            <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio item 2-->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Explore</div>
-                            <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio item 3-->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Finish</div>
-                            <div class="portfolio-caption-subheading text-muted">Identity</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio item 4-->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Lines</div>
-                            <div class="portfolio-caption-subheading text-muted">Branding</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio item 5-->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Southwest</div>
-                            <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio item 6-->
-                <div class="col col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Window</div>
-                            <div class="portfolio-caption-subheading text-muted">Photography</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=============== Begin : ABOUT  ===============-->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-heading text-uppercase">ABOUT</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            <ul class="timeline">
-                <li>
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-first">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-second">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/1.jpg" alt="..." /></div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-third">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-first">
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-second">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/1.jpg" alt="..." /></div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-third" <div class="timeline-panel">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-first">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-second">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/1.jpg" alt="..." /></div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-third">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-first">
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-second">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid"
-                                    src="assets/img/about/1.jpg" alt="..." /></div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-third" <div class="timeline-panel">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut
-                                        voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae
-                                        sit vero
-                                        unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </li>
-
-                <li class="timeline-inverted">
-                    <div class="timeline-image">
-                        <h4>
-                            <p>Long</p>
-                            <p>Long</p>
-                            <p>Long</p>
-                        </h4>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--=============== Begin : TEAM ===============-->
-    <section class="team">
-        <div class="container">
-            <h2 class="section-heading text-uppercase">OUR AMAZING TEAM</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-    </section>
-
-
 </body>
 
 </html>
