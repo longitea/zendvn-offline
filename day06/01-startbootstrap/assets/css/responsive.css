@@ -1,0 +1,154 @@
+/* Responsive */
+
+/* 1.Mobile <= 576px do ...*/
+@media (min-width:100px) {
+    /* menu mobile change */
+    .menu-wrapper {
+        display: none;
+    }
+
+    /* About Respon */
+    #about {}
+
+    .timeline-img {
+        width: 66px;
+        height: 66px;
+    }
+
+    .circle-end h4 {
+        font-size: 10px;
+        line-height: 14px;
+        /* margin-top: 12px; */
+    }
+
+    /* orther 2-col */
+    .row .col-md-2 {
+        order: -1;
+    }
+    .text-left,
+    .text-right {
+        text-align: left;
+        margin: 0;
+        padding: 0 15px;
+    }
+    .circle-end {
+        margin: 0;
+    }
+
+    .timeline {
+        position: relative;
+    }
+    /* line gray */
+    .timeline::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 28px;
+        width: 2px; 
+        background-color: #e9ecef;
+        right: 50%;
+        z-index: -1;
+    }
+    
+
+
+}
+
+/* 2.IPad Mini >=576px and <= 767px */
+@media (min-width: 576px) {}
+
+/* 3.Ipad >= 768px and <= 991px*/
+@media (min-width: 768px) {
+
+    /* About Respon */
+    .timeline-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle-end h4 {
+        font-size: 13px;
+        line-height: 18px;
+        /* margin-top: 16px; */
+    }
+    /* text position */
+    .text-right {
+        text-align: right;
+        margin-right: 20px;
+        padding: 0 20px 20px 100px;
+    }
+    
+    .text-left {
+        margin-left: 20px;
+        text-align: left;
+        padding: 0 100px 20px 20px;
+    }
+
+    /* orther 3-col */
+
+    .row:nth-child(even) .col-md-2 {
+        order: 1;
+    }
+
+    .row:nth-child(even) .col-sm-10 {
+        order: 2;
+    }
+
+    .row:nth-child(4) .col-sm-10 {
+        order: 2;
+    }
+    /* order flex here */
+    .circle-end {
+        margin: auto;
+    }
+    .row .col-md-2 {
+        order: 0;
+    }
+
+    .timeline::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: unset;
+        width: 2px; 
+        background-color: #e9ecef;
+        right: 50%;
+        z-index: -1;
+    }
+}
+
+
+/* 4.LAPTOP >= 992 and <= 1199 */
+@media (min-width: 992px) {
+    /* menu display change */
+    .menu-wrapper {
+        display:contents;
+    }
+
+    /* About Respon */
+    .timeline-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-end h4 {
+        font-size: 18px;
+        line-height: 26px;
+        /* margin-top: 30px; */
+    }
+}
+
+
+/* 1.PC low Resolution >= 1200 and <= 1399px  */
+@media (min-width: 1200px) {
+
+    /* About Respon */
+    .timeline-img {
+        width: 170px;
+        height: 170px;
+    }
+
+
+}

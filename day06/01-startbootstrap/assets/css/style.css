@@ -32,6 +32,7 @@ ul {
 body {
     font-family: var(--ff-roboto);
     font-size: 16px;
+    transform: ;
 }
 
 h1,
@@ -172,6 +173,7 @@ a {
     color: inherit;
     margin-bottom: 64px;
     font-size: 72px;
+    text-align: center;
 }
 
 /* .banner-content>a {
@@ -213,14 +215,15 @@ a {
 
 /* -=============== Porfolio START ===============- */
 #porfolio {
-    background-color: var(--bs-light-rgb);
+    /* background-color: var(--bs-light-rgb); */
+    background-color: lightskyblue;
 }
 
 /* images */
 .portfolio-item {}
 
 .portfolio-link {
-    max-width: 416px;
+
     display: block;
     position: relative;
 
@@ -267,6 +270,57 @@ a {
 /* -=============== ABOUT START ===============- */
 
 #about {}
+
+.timeline-body {
+    padding: 0 15px;
+}
+
+.timeline-body h4 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.timeline-body p {
+    font-size: 1rem;
+}
+
+.timeline-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 7px solid #e9ecef;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.circle-end {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-white);
+    width: 176px;
+    height: 176px;
+}
+
+.circle-end h4 {
+    color: inherit;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.timeline {
+    position: relative;
+}
+
+
+
 
 /* -=============== TEAM START ===============- */
 #team {
@@ -369,13 +423,10 @@ a {
 
 /* 2. Input Right */
 
-.form-group:last-child {
-    height: 100%;
-}
-
 .text-box {
     padding: 20px;
     height: 100%;
+    min-height: 240px;
 }
 
 /* 3. button send */
@@ -404,93 +455,3 @@ a {
 .text-dark:focus {
     color: #1a1e21;
 }
-
-
-/* Xóa ở đây */
-.background-black {
-    background-color: bisque;
-}
-
-
-.fex-1 {
-    flex: 1;
-}
-
-
-@media (max-width:767px) {
-    .order-img {
-        order: -1;
-    }
-
-}
-
-.timeline-body {
-    padding: 0 15px;
-    width: 93%;
-}
-
-.timeline-body h4 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-}
-
-.timeline-body p {
-    font-size: 1rem;
-}
-
-.text-right {
-    text-align: right;
-    padding: 0 20px 20px 100px;
-}
-
-.text-left {
-    text-align: left;
-    padding: 0 100px 20px 20px;
-}
-
-.rounded-circle {
-    border-radius: 50%;
-    border: 7px solid #e9ecef;
-
-}
-
-.mb-100 {
-    margin-bottom: 100px;
-}
-
-.circle-end {
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    background-color: var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-white);
-    width: 176px;
-    height: 176px;
-}
-
-.circle-end h4 {
-
-    color: inherit;
-    font-size: 18px;
-    line-height: 26px;
-}
-
-.timeline {
-    position: relative;
-}
-
-.timeline::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    width: 2px; 
-    background-color: #e9ecef;
-    right: 50%;
-    z-index: -1;
-}
-
