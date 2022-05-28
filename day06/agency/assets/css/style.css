@@ -231,6 +231,7 @@ a {
 
 .img-fluid {
     max-width: 100%;
+    display: block;
 }
 
 .portfolio-hover {
