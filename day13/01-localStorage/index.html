@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 1.ắt sự kiện khi click vào nút submit
+        -   lấy value name
+        -   lấy value email 
+        -   lấy value job
+        -  lưu 3 giá trị vào 1 mảng -->
+
+
+    <div class="container py-3">
+        <div class="card card-body">
+            <div class="mb-3">
+                <label>Họ tên</label>
+                <input type="text" id="name"  class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="text" id="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Nghề nghiệp</label>
+                <select id="job" class="form-select">
+                    <option value="student">Sinh viên</option>
+                    <option value="teacher">Giảng viên</option>
+                    <option value="developer">Lập trình viên</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn btn-success">Submit</button>
+                <button class="btn btn-danger">Delete Storage</button>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
