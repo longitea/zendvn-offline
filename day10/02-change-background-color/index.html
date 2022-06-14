@@ -5,38 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Background Color</title>
-    <style>
-        /* Reset CSS */
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-        }
-        h1{
-            color: black;
-            margin: 10px;
-        }
-        button {
-            padding: 10px 20px ; 
-            font-size: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <h1>RGB(255,255,255)</h1>
-    <button>Switch</button>
-    
+    <div class="box">
+        <h1>RGB(255,255,255)</h1>
+
+    </div>
+    <div class="box">
+        <button class="btn-change"> Change Color</button>
+        <button class="btn-coppy">Coppy</button>
+    </div>
+    <input type="text">
 
 
     <script src="main.js"></script>

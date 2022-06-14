@@ -25,5 +25,5 @@ function renderTable(search = ''){
         }else result += '<tr><td>' + element + '</td></tr>';
 
     }
-    listName.innerHTML = result;
+    listName.innerHTML = result
 }

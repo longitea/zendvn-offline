@@ -18,4 +18,3 @@ function replaceImage(newSource){
         replaceSource.setAttribute('src', newSource);
     }
 }
-  

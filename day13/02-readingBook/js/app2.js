@@ -16,6 +16,7 @@
 // -============================== TĂNG SIZE CHỮ ==============================-
 var btnIncrease = document.querySelector('.btn-font-size.increase');
 var btnDecrease = document.querySelector('.btn-font-size.decrease');
+let contain = document.getElementById('contain');
 
 // 4. get fontsize từ local khi vừa vào trang
 function getFontSizeFromLocal(param1) {
@@ -27,7 +28,6 @@ function getFontSizeFromLocal(param1) {
     for (var element of arrayOfText) {
         element.style.fontSize = result;
     }
-
 }
 
 // CASE 02: LOAD FONTSIZE KHI VỪA VÀO TRANG
@@ -35,9 +35,6 @@ getFontSizeFromLocal('h1');
 getFontSizeFromLocal('h3');
 getFontSizeFromLocal('p');
 getFontSizeFromLocal('li');
-
-
-
 
 function addFontSize(param1) {
     // 1. get current font size 
@@ -87,12 +84,21 @@ btnDecrease.addEventListener('click', function () {
 
 // -============================== THAY ĐỔI MÀU NỀN ==============================-
 var colorContent = document.querySelector('#content');
-/**
-    1. bắt sự kiện click -> change color
-    2. save color into localStorage
- */
 
-//  3. get color form localStorage
+/**
+    1. Bắt sự kiện click vào document
+    2. kiểm tra nếu click vào nút color ->
+        - lấy vaulue color của btn đó
+        - save data vào localStorage
+ */
+document.addEventListener('click', function(e){
+    let element = e.target;
+    if(element.classList.contains('btn-background')) {
+        let value = element.dataset.value;
+        content.style.backgroundColor = value;
+        localStorage.setItem('backgroundColor', value);
+    }
+})
 
 colorContent.style.backgroundColor =  localStorage.getItem('backgroundColor');
     
