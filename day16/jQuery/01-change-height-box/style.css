@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.box {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid black;
+    background-color: aqua;
+    vertical-align: top;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+  display: block;
+  height: 40px;
+  width: 80px;
+  background-color: bisque;
+  border-radius: 5px;
+  margin: 0 auto;
+}

@@ -51,6 +51,12 @@ let todos = [
     },
 ];
 
+//  đặt 1 biến cờ
+var isEdit = '';
+
+
+
+
 
 // ? Có bao nhiêu cách lấy element trong [array], {object} 
 // xem lại phân giải dữ liệu là [{}, {}, {}]
@@ -80,7 +86,7 @@ const renderTodoList = (todoList) => {
             <th> ${i + 1} </th>  
             <td> ${todoList[i].name} </td>
             <td> ${level} </td>
-            <td><button class="btn btn-warning btn-sm">Edit</button>
+            <td><button class="btn btn-warning btn-sm" data-id="${todoList[i].id}">Edit</button>
             <button class="btn btn-danger btn-sm" data-id="${todoList[i].id}">Delete</button></td>
         </tr>
         `
@@ -178,14 +184,13 @@ createElement.addEventListener('click', (e) => {
     }
     todos.push(newTodo);
     renderTodoList(todos);
+    // reset lại giá trị mới.
     selectLevel.value = '1';
     inputValue.value = '';
     createElement.disabled = true;
 })
 
 // -===============  Search Function ===============-
-
-
 /**
 1. bắt sự kiện search
     -> get value input
@@ -196,11 +201,11 @@ createElement.addEventListener('click', (e) => {
 */
 
 const btnSearch = document.querySelector('#btn-search');
-const inputValueSearch = document.querySelector('#input-search-todo');
+const inputName = document.querySelector('#input-search-todo');
 
 
 btnSearch.addEventListener('click', (e) => {
-    let search = inputValueSearch.value.trim();
+    let search = inputName.value.trim();
     let newToDo = [];
     for(var i = 0; i < todos.length; i++){
         if(todos[i].name.includes(search)){
@@ -209,7 +214,7 @@ btnSearch.addEventListener('click', (e) => {
     }
 
     renderTodoList(newToDo);
-    inputValueSearch.value ='';
+    inputName.value ='';
 });
 
 
@@ -219,31 +224,39 @@ btnSearch.addEventListener('click', (e) => {
     -> lấy ra được tr parentElement
     -> từ parent tìm thằng con td
     -> thay thế tag td -> input value
-    -> td add classList input
 */
-
 
 document.addEventListener('click', (e) => {
     let element = e.target;
     if(element.classList.contains('btn-warning')){
-        let elementTr = element.parentElement.parentElement;
-        let elementTd = elementTr.children[1];
-        console.log([elementTd]);
-        let newNode = createDOM(elementTd.innerText);
-        elementTd.replaceChild(newNode, elementTd.childNodes[0]);
-        console.log(newNode.value);
+
+        let id = element.dataset.id;
+        // gán biến cờ vào isEdit
+        isEdit = id;
+        console.log(id);
+        let item = todos.find( function(ele) {
+            return ele.id === id;
+        });
+        
+        inputValue.value = item.name; 
+        selectLevel.value = item.level; 
+
+        // console.log(item);
+        // let elementTr = element.parentElement.parentElement;
+        // let elementTd = elementTr.children[1];
+
+        // let newNode = createDOM(elementTd.innerText);
+        // elementTd.replaceChild(newNode, elementTd.childNodes[0]);
     }
-} ) 
+})
 
-
-
-function createDOM(valueText){
-    const inputDOM = document.createElement('input');
-    inputDOM.type = 'text';
-    inputDOM.id = 'thanh';
-    inputDOM.style = 'width:500px; background-color:bisque;'
+// function createDOM(valueText){
+//     const inputDOM = document.createElement('input');
+//     inputDOM.type = 'text';
+//     inputDOM.id = 'thanh';
+//     inputDOM.style = 'width:500px; background-color:bisque;'
     
-    inputDOM.value = valueText;
-    return inputDOM;
-}
+//     inputDOM.value = valueText;
+//     return inputDOM;
+// }
 
