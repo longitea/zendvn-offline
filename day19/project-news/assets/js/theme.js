@@ -10,7 +10,8 @@ var theme = {
     theme.stickyHeader();
     theme.subMenu();
     theme.offCanvas();
-    theme.isotope();
+    // tắt thư viện isotope đi
+    // theme.isotope();
     theme.onepageHeaderOffset();
     theme.anchorSmoothScroll();
     theme.svgInject();

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const API_URL = 'http://apiforlearning.zendvn.com/api/';
     const API_CATEGORY = `${API_URL}categories_news`;
-    const API_THEGIOI_ARTICLE = `${API_URL}articles/6973`
+    const API_ID_ARTICLE = `${API_URL}articles/`
 
     let mainMenu = $('.main-menu');
     let detailTitle = $('#detail-title')
@@ -9,7 +9,13 @@ $(document).ready(function () {
     let detailThumb = $('.bg-image')
     let detailSmallThumb = $('.card-img-top img')
     let detailContent = $('#detail-content')
+    let detailDescription = $('#detail-description')
 
+    // khi nó chuyển hướng đến trang này 
+    // nó sẽ thực thi từ trên xuống dưới và lấy được id trước khi mà gọi API
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const idDetail = urlParams.get('id')
 
     renderMenu();
     renderArticle();
@@ -58,13 +64,14 @@ $(document).ready(function () {
     function renderArticle() {
         $.ajax({
             type: "GET",
-            url: API_THEGIOI_ARTICLE,
+            url: API_ID_ARTICLE + idDetail,
             data: "data",
             dataType: "JSON",
             success: function (response) {
-                console.log(response.thumb);
+                console.log(response);
                 $(detailTitle).html(response.title)
                 $(detailTitlePublishDate).html(response.publish_date)
+                detailDescription.html(response.description)
                 // $(detailThumb).attr('data-image-src', response.thumb)
                 $(detailThumb).css('background-image', 'url(' + response.thumb + ')')
                 $(detailSmallThumb).attr('src', response.thumb)

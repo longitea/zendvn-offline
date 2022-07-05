@@ -83,6 +83,7 @@ $(document).ready(function () {
             },
             dataType: "json",
             success: function (data) {
+
                 let content = '';
                 for (let i = 0; i < data.length; i++) {
                     content += /*html*/`<article class="item post col-md-6">${renderPost(data[i])}</article>`;
@@ -99,10 +100,12 @@ $(document).ready(function () {
         let description = item.description;
         let pubDate = new Date(item.publish_date);
         pubDate = pubDate.toLocaleDateString('vi-VI');
+        let linkDetail = `detail.html?id=${item.id}`
+
         return /*html*/`
             <div class="card shadow-lg">
                 <figure class="card-img-top overlay overlay-1">
-                    <a href="detail.html"><img src="${thumb}" alt="" /></a>
+                    <a href=${linkDetail}><img src="${thumb}" alt="" /></a>
                     <figcaption><h5 class="from-top mb-0">Read More</h5></figcaption>
                 </figure>
                 <div class="card-body">
@@ -111,7 +114,7 @@ $(document).ready(function () {
                             <a href="#" class="hover link-grape" rel="category">Architecture</a>
                         </div>
                         <h2 class="post-title mt-1 mb-0">
-                            <a class="link-navy" href="detail.html">${title}</a>
+                            <a class="link-navy" href=${linkDetail}>${title}</a>
                         </h2>
                     </div>
                     <div class="post-content">
