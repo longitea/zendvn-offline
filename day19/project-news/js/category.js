@@ -1,59 +1,40 @@
-// http://apiforlearning.zendvn.com/api/categories_news/1/articles?offset=0&limit=10&sort_by=id&sort_dir=desc
+import { API_CATEGORY_BY_ID } from "./Contant/GetAPI.js";
+import renderMenu from "./module/RenderMenu.js";
+import { renderPostBig, renderPostSmall } from "./module/RenderPost.js";
+
 
 $(document).ready(function () {
-    const API_URL = 'http://apiforlearning.zendvn.com/api/';
-    const API_CATEGORY = `${API_URL}categories_news`;
-    const API_ARTICLE = `${API_URL}categories_news`;
-
-
+    // DOM Seletor
     let mainMenu = $('.main-menu');
-
-    renderMenu();
-        
-
-
+    let categoryTitle = $('#category-title')
+    let postsBig = $('#posts_big');
+    let postSmall = $('#posts_small');
 
 
-    // -=============== API Render Menu  ===============-
-    function renderMenu() {
+
+    // Module Render Menu 
+    renderMenu(mainMenu);
+    renderTitleSection();
+
+    // load article
+
+    renderPostBig(postsBig)
+    renderPostSmall(postSmall);
+
+
+    function renderTitleSection() {
+
         $.ajax({
             type: "GET",
-            url: API_CATEGORY,
-            data: 'data',
-            dataType: "json",
+            // khúc này là lấy api của Category/id
+            url: API_CATEGORY_BY_ID,
+            data: "data",
+            dataType: "JSON",
             success: function (response) {
-
-                let mainCategory = response.slice(0, 4).map(element => (`
-                    <li class="nav-item">
-                        <a class="nav-link" href=${element.link}>${element.name}</a>
-                    </li>
-                `
-                )).join('')
-
-                let subCategory = response.slice(4, response.length).map(element => (`
-                    <li class="nav-item">
-                        <a class="dropdown-item" href=${element.link}>${element.name}</a>
-                    </li>
-                `
-                )).join('')
-
-                subCategory = `
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Danh mục
-                        khác</a>
-                    <ul class="dropdown-menu">
-                        ${subCategory}
-                    </ul>
-                    </li>
-                `
-                $(mainMenu).html(mainCategory + subCategory)
-
+                console.log(response);
+                categoryTitle.text(response.name)
             }
         });
     }
-
-    
-
-
 
 }); 
