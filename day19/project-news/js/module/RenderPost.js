@@ -1,17 +1,14 @@
-import { API_ARTICLE_BY_ID } from "../Contant/GetAPI.js";
-
-
-export function renderPostBig(postsBig) {
+export function renderPostBig(postsBig, API_URL) {
     $.ajax({
         type: "GET",
-        url: API_ARTICLE_BY_ID ,
+        url: API_URL ,
         data: {
             offset: 0,
             limit: 3
         },
         dataType: "json",
         success: function (data) {
-            console.log(API_ARTICLE_BY_ID);
+            console.log(API_URL);
             let content = '';
             for (let i = 0; i < data.length; i++) {
                 // gọi component renderPost -> trả về DOM element
@@ -22,10 +19,10 @@ export function renderPostBig(postsBig) {
     });
 }
 
-export function renderPostSmall(postSmall) {
+export function renderPostSmall(postSmall, API_URL) {
     $.ajax({
         type: "GET",
-        url: API_ARTICLE_BY_ID ,
+        url: API_URL ,
         data: {
             offset: 3,
             limit: 4

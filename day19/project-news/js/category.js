@@ -1,4 +1,4 @@
-import { API_CATEGORY_BY_ID } from "./Contant/GetAPI.js";
+import { API_ARTICLE_BY_ID_CATEGORY, API_CATEGORY_DETAIL_BY_ID } from "./contants/api_path.js";
 import renderMenu from "./module/RenderMenu.js";
 import { renderPostBig, renderPostSmall } from "./module/RenderPost.js";
 
@@ -18,8 +18,8 @@ $(document).ready(function () {
 
     // load article
 
-    renderPostBig(postsBig)
-    renderPostSmall(postSmall);
+    renderPostBig(postsBig, API_ARTICLE_BY_ID_CATEGORY)
+    renderPostSmall(postSmall, API_ARTICLE_BY_ID_CATEGORY);
 
 
     function renderTitleSection() {
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             // khúc này là lấy api của Category/id
-            url: API_CATEGORY_BY_ID,
+            url: API_CATEGORY_DETAIL_BY_ID,
             data: "data",
             dataType: "JSON",
             success: function (response) {

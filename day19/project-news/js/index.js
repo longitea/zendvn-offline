@@ -1,3 +1,4 @@
+import { API_ARTICLE } from "./contants/api_path.js";
 import renderMenu from "./module/RenderMenu.js";
 import { renderPostBig, renderPostSmall } from "./module/RenderPost.js";
 
@@ -10,7 +11,8 @@ $(document).ready(function () {
 
     
     renderMenu(mainMenu);
-    renderPostBig(postsBig)
-    renderPostSmall(postsSmall);
+    // 1. DOM, 2. uRL API
+    renderPostBig(postsBig, API_ARTICLE)
+    renderPostSmall(postsSmall, API_ARTICLE);
 
 });

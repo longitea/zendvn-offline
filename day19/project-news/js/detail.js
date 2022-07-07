@@ -1,5 +1,5 @@
+import { API_ARTICLE_DETAIL_BY_ID } from "./contants/api_path.js";
 import renderMenu from "./module/RenderMenu.js";
-import {  API_ARTICLE_DETAIL_BY_ID } from "./Contant/GetAPI.js";
 
 $(document).ready(function () {
 

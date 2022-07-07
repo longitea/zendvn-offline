@@ -1,4 +1,4 @@
-import { API_CATEGORY } from "../Contant/GetAPI.js";
+import { API_CATEGORY } from "../contants/api_path.js";
 
 // lấy vị trí muốn render vào dom từ props
 export default function renderMenu(mainMenu) {
