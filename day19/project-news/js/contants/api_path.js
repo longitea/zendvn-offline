@@ -20,7 +20,7 @@ export const API_CATEGORY_DETAIL_BY_ID = GET_API_BY_ID(API_CATEGORY, idCategory)
 // 2. Detail.html
 export const API_ARTICLE_DETAIL_BY_ID = GET_API_BY_ID(API_ARTICLE, idArticle)
 
-// 4. Render Post API
+// 3. Render Post API
 export const API_ARTICLE_BY_ID_CATEGORY =  GET_API_BY_ID(API_CATEGORY, idCategory) + '/articles'
 
 
