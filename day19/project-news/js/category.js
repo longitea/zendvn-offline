@@ -9,6 +9,8 @@ $(document).ready(function () {
     let categoryTitle = $('#category-title')
     let postsBig = $('#posts_big');
     let postSmall = $('#posts_small');
+    const commentAll = JSON.parse(localStorage.getItem("comments"))
+
 
 
 
@@ -18,8 +20,8 @@ $(document).ready(function () {
 
     // load article
 
-    renderPostBig(postsBig, API_ARTICLE_BY_ID_CATEGORY)
-    renderPostSmall(postSmall, API_ARTICLE_BY_ID_CATEGORY);
+    renderPostBig(postsBig, API_ARTICLE_BY_ID_CATEGORY, commentAll)
+    renderPostSmall(postSmall, API_ARTICLE_BY_ID_CATEGORY, commentAll);
 
 
     function renderTitleSection() {
@@ -31,7 +33,6 @@ $(document).ready(function () {
             data: "data",
             dataType: "JSON",
             success: function (response) {
-                console.log(response);
                 categoryTitle.text(response.name)
             }
         });

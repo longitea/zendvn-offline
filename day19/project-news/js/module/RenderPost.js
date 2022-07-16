@@ -1,4 +1,6 @@
-export function renderPostBig(postsBig, API_URL) {
+import countComment from "./countComment.js";
+
+export function renderPostBig(postsBig, API_URL, commentAll) {
     $.ajax({
         type: "GET",
         url: API_URL ,
@@ -8,18 +10,17 @@ export function renderPostBig(postsBig, API_URL) {
         },
         dataType: "json",
         success: function (data) {
-            console.log(API_URL);
             let content = '';
             for (let i = 0; i < data.length; i++) {
                 // gọi component renderPost -> trả về DOM element
-                content += /*html*/`<article class="post"> ${renderPost(data[i])}</> `;
+                content += /*html*/`<article class="post"> ${renderPost(data[i], commentAll)}</article>`;
             }
             postsBig.html(content);
         }
     });
 }
 
-export function renderPostSmall(postSmall, API_URL) {
+export function renderPostSmall(postSmall, API_URL, commentAll) {
     $.ajax({
         type: "GET",
         url: API_URL ,
@@ -32,7 +33,7 @@ export function renderPostSmall(postSmall, API_URL) {
 
             let content = '';
             for (let i = 0; i < data.length; i++) {
-                content += /*html*/`<article class="item post col-md-6"> ${renderPost(data[i])} </article> `;
+                content += /*html*/`<article class="item post col-md-6"> ${renderPost(data[i], commentAll)} </article> `;
             }
             postSmall.html(content);
         }
@@ -40,13 +41,15 @@ export function renderPostSmall(postSmall, API_URL) {
 
 }
 
-export default function renderPost(item) {
+export default function renderPost(item, commentAll) {
     let thumb = item.thumb;
     let title = item.title;
     let description = item.description;
     let pubDate = new Date(item.publish_date);
     pubDate = pubDate.toLocaleDateString('vi-VI');
     let linkDetail = `detail.html?idArticle=${item.id}`
+
+    const count = countComment(commentAll, item.id)
 
     return /*html*/`
             <div class="card shadow-lg">
@@ -70,7 +73,7 @@ export default function renderPost(item) {
                 <div class="card-footer">
                     <ul class="post-meta d-flex mb-0">
                         <li class="post-date"><i class="uil uil-calendar-alt"></i><span>${pubDate}</span></li>
-                        <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3<span>
+                        <li class="post-comments"><a href="#"><i  class="uil uil-comment"></i>${count}<span style='color:blue'>
                                     Comments</span></a></li>
                         <li class="post-likes ms-auto"><a href="#"><i
                                     class="uil uil-heart-alt"></i>3</a></li>

@@ -9,7 +9,8 @@ $(document).ready(function () {
     let detailSmallThumb = $('.card-img-top img')
     let detailContent = $('#detail-content')
     let detailDescription = $('#detail-description')
-
+    let detailCategory = $('#detail-category')
+    let countComment = $('#show-comment')
 
     renderMenu(mainMenu);
     renderArticle();
@@ -23,20 +24,24 @@ $(document).ready(function () {
             data: "data",
             dataType: "JSON",
             success: function (response) {
-                $(detailTitle).html(response.title)
-                $(detailTitlePublishDate).html(response.publish_date)
+                console.log(response);
+                detailTitle.html(response.title)
+                detailTitlePublishDate.html(response.publish_date)
                 detailDescription.html(response.description)
-                // $(detailThumb).attr('data-image-src', response.thumb)
-                $(detailThumb).css('background-image', 'url(' + response.thumb + ')')
-                $(detailSmallThumb).attr('src', response.thumb)
-                $(detailContent).html(response.content)
+                // detailThumb).attr('data-image-src', response.thumb)
+                detailThumb.css('background-image', 'url(' + response.thumb + ')')
+                detailSmallThumb.attr('src', response.thumb)
+                detailContent.html(response.content)
+
+                let linkCate = `category.html?idCategory=${response.category_id}`
+                detailCategory.html(`
+                    <a href=${linkCate} class="text-reset" rel="category">${response.category.name}</a>
+                `)
             }
         });
     }
 
-    
-    // render Comment
-    function renderComment(objectComment){
+    function renderComment(objectComment) {
         $('#singlecomments').prepend(`
             <li class="comment">
                 <div class="comment-header d-md-flex align-items-center">
@@ -63,43 +68,58 @@ $(document).ready(function () {
         `)
     }
 
+    // -============================== Lấy Cmt từ Local -> render -> UI  ==============================-
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const idArticle = urlParams.get('idArticle')
 
-    //  get value input
-    let comments = JSON.parse(localStorage.getItem("comments")) || []
+    // 1. Lưu tất cả cmnt vào 1 array chung
+    let commentAll = JSON.parse(localStorage.getItem("comments")) || []
+
+    // 2. Khi vừa vào trang lọc ra cmt nào trùng với id bài viết -> lưu vào array second
+    let comments = commentAll.filter((ev => ev.id === idArticle))
+
+    // 3. Khi vừa vào trang render ra các cmt lấy từ array second
+    comments.map(ev => {
+        renderComment(ev)
+    })
+
+
+    // -============================== Xử lý sự kiện add new comment  ==============================-
 
     let inputCMTName = $('#c-name')
     let inputCMTContent = $('textarea')
     let submitComment = $('#submit-comment')
-    let countCMT = $('#count-comment')
 
-    // inputCommentName.on(ev  => arrayComment.name = {...arrayComment, name:ev.target.value })
-    // inputCommentContent.on('change', ev =>  arrayComment.name = {...arrayComment, comment: ev.target.value })
-    
-    submitComment.on('click' , ev => {
+    //  đếm số lượng cmt
+    let countCMT = $('#count-comment')
+    countCMT.text(comments.length + 2 + ' Comments')
+    countComment.html(`${comments.length + 2 } <span style='color:yellow'>Comments</span> `)
+
+    submitComment.on('click', ev => {
         ev.preventDefault()
-        
-        // create new comment
+        // create Object comment
         const newComment = {
             name: inputCMTName.val(),
             comment: inputCMTContent.val(),
             date: new Date(),
+            id: idArticle
         }
 
-        console.log(newComment)
+        // save new comment -> localStorage
+        commentAll.push(newComment)
+        localStorage.setItem('comments', JSON.stringify(commentAll))
 
-        // save new comment
-        comments.unshift(newComment)
-        localStorage.setItem('comments', JSON.stringify(comments))
-
-        // render new comment
+        // render new comment -> UI
         renderComment(newComment)
 
         // count new comment
-        countCMT.text(comments.length + 2 + ' Comments')
+        countCMT.text(comments.length + 3 + ' Comments')
 
-        console.log(comments);
+        inputCMTName.val('')
+        inputCMTContent.val('')
 
-        
+        countComment.html(`${comments.length + 3 } <span style='color:red'}>Comments</span> `)
+
     })
-
 });

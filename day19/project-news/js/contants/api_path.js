@@ -12,7 +12,6 @@ const GET_API_BY_ID = (url, id) => {
     return `${url}/${id}`
 }
 
-
 // -=============== PAGE ===============-
 // 1. Category.html
 export const API_CATEGORY_DETAIL_BY_ID = GET_API_BY_ID(API_CATEGORY, idCategory)
@@ -22,6 +21,15 @@ export const API_ARTICLE_DETAIL_BY_ID = GET_API_BY_ID(API_ARTICLE, idArticle)
 
 // 3. Render Post API
 export const API_ARTICLE_BY_ID_CATEGORY =  GET_API_BY_ID(API_CATEGORY, idCategory) + '/articles'
+
+// 4. SLIDER 
+export const API_TOP_ARTICLES='http://apiforlearning.zendvn.com/api/articles/top-articles'
+
+// 5. Popular Post
+export const API_POPULAR_POST = 'http://apiforlearning.zendvn.com/api/articles/most-read'
+
+// 6. Categories with count articles
+export const API_CATEGORY_WITH_COUNT_ARTILCE = ' http://apiforlearning.zendvn.com/api/categories_news/list-with-count-articles'
 
 
 export default {}
