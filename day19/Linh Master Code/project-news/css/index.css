@@ -1,0 +1,7 @@
+#posts_small .item.post > div {
+    height: 100%;
+}
+
+.zvn-btn-like {
+    cursor: pointer;
+}
