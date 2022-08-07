@@ -215,8 +215,8 @@ a {
 
 /* -=============== Porfolio START ===============- */
 #porfolio {
-    /* background-color: var(--bs-light-rgb); */
-    background-color: lightskyblue;
+    background-color: var(--bs-light-rgb);
+    /* background-color: lightskyblue; */
 }
 
 /* images */
